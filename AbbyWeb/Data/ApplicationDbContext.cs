@@ -5,10 +5,9 @@ namespace AbbyWeb.Data
 {
     public class ApplicationDbContext:DbContext
     {
-        private readonly ApplicationDbContext _context;
-        public ApplicationDbContext(ApplicationDbContext context)
+        public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options)
         {
-            _context= context;
+            
         }
 
         public DbSet<Category> Category { get; set; }

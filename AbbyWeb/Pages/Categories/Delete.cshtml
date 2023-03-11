@@ -1,6 +1,7 @@
 ﻿@page
 @model AbbyWeb.Pages.Categories.DeleteModel
 @{
+    ViewData["Title"] = "Delete";
 }
 
 <form method="post">
@@ -10,16 +11,13 @@
             <h2 class="text-primary pl-3">Delete Category</h2>
             <hr />
         </div>
-        <div asp-validation-summary="All"></div>
         <div class="mb-3">
             <label class="text-primary" asp-for="Category.Name"></label>
             <input asp-for="Category.Name" type="text" class="form-control" disabled />
-            <span asp-validation-for="Category.Name" class="text-danger"></span>
         </div>
         <div class="mb-3">
             <label class="text-primary" asp-for="Category.DisplayOrder"></label>
             <input asp-for="Category.DisplayOrder" class="form-control" disabled />
-            <span asp-validation-for="Category.DisplayOrder" class="text-danger"></span>
         </div>
         <button type="submit" class="btn btn-danger mx-2" style="width:150px">Delete</button>
         <a asp-page="Index" class="btn btn-primary mx-2" style="width:150px">Back to List</a>
